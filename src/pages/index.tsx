@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
+import 'rsuite/dist/styles/rsuite-default.css'
+import { Button } from 'rsuite';
 
 export default function Home() {
   return (
@@ -10,6 +12,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+      <Button>Hello World</Button>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>

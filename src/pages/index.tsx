@@ -3,6 +3,8 @@ import styles from '../styles/Home.module.scss'
 import 'rsuite/dist/styles/rsuite-default.css'
 import { Button } from 'rsuite';
 
+console.log(styles)
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -63,6 +65,14 @@ export default function Home() {
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
+      <div className="test">Testing STYLE JSX</div>
+      <style jsx>
+        {`
+          .test {
+            font-size: 20px;
+          }
+        `}
+      </style>
     </div>
   )
 }

@@ -1,9 +1,17 @@
-import '../styles/globals.scss'
+import "../styles/globals.scss";
+import "../styles/antd.custom.less";
+import "../styles/rsuite.custom.less";
 // import App from "next/app";
-import type { AppProps /*, AppContext */ } from 'next/app'
+import type { AppProps /*, AppContext */ } from "next/app";
+
+import ApolloProvider from "../context/apollo/ApolloProvider"
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ApolloProvider>
+      <Component {...pageProps} />
+    </ApolloProvider>
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -18,4 +26,4 @@ function MyApp({ Component, pageProps }: AppProps) {
 //   return { ...appProps }
 // }
 
-export default MyApp
+export default MyApp;
